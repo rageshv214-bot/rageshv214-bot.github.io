@@ -84,7 +84,7 @@
         }
 
         .btn-wrapper {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto;
         }
 
         .cyber-btn {
@@ -111,7 +111,7 @@
         }
 
         .main-container {
-            max-width: 1050px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -183,19 +183,26 @@
         .data-node:hover::after { width: 100%; }
 
         .data-node h3 { color: #fff; margin-bottom: 0.6rem; font-family: 'Orbitron'; font-size: 1.25rem; }
-        .data-node p { color: var(--text-cyber); font-size: 1rem; margin-bottom: 1.2rem; font-weight: 300; }
+        .data-node p { color: var(--text-cyber); font-size: 1rem; margin-bottom: 1.2rem; font-weight: 300; line-height: 1.5;}
         
         .code-tag {
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--neon-cyan);
             border: 1px solid rgba(0, 255, 255, 0.3);
             padding: 5px 12px;
             border-radius: 4px;
             background: rgba(0, 255, 255, 0.05);
+            display: inline-block;
         }
 
-        /* NEW INTEGRATED HOLOGRAPHIC GALLERY */
+        .lang-dot {
+            height: 8px; width: 8px;
+            background-color: #b07219;
+            border-radius: 50%; display: inline-block; margin-right: 5px;
+        }
+
+        /* HOLOGRAPHIC GALLERY */
         .identity-matrix-wrapper {
             position: relative;
             width: 100%;
@@ -217,7 +224,6 @@
             z-index: 1;
         }
 
-        /* Dynamic Blending Filters */
         .hologram-card img {
             width: 100%; height: 100%; object-fit: cover;
             filter: grayscale(100%) contrast(1.2);
@@ -225,16 +231,12 @@
             transition: all 0.6s ease;
         }
 
-        /* Scanline Texture Overlay */
         .hologram-card::after {
             content: ''; position: absolute; inset: 0;
             background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
-            pointer-events: none;
-            opacity: 0.6;
-            transition: opacity 0.6s ease;
+            pointer-events: none; opacity: 0.6; transition: opacity 0.6s ease;
         }
 
-        /* Dynamic Positions (Default) */
         #holo-1 {
             transform: translateX(-150px) rotate(-8deg);
             border: 2px solid var(--neon-pink);
@@ -247,17 +249,14 @@
             background: rgba(0, 255, 255, 0.1);
         }
 
-        /* Activation Blend on Hover */
         .identity-matrix-wrapper:hover #holo-1 {
             transform: translateX(-240px) translateY(-10px) rotate(-3deg) scale(1.05);
-            z-index: 2;
-            box-shadow: 0 20px 60px rgba(255, 0, 85, 0.4);
+            z-index: 2; box-shadow: 0 20px 60px rgba(255, 0, 85, 0.4);
         }
 
         .identity-matrix-wrapper:hover #holo-2 {
             transform: translateX(240px) translateY(10px) rotate(3deg) scale(1.05);
-            z-index: 2;
-            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4);
+            z-index: 2; box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4);
         }
 
         .identity-matrix-wrapper:hover img {
@@ -269,14 +268,14 @@
 
         footer {
             text-align: center; padding: 4rem;
-            color: var(--text-cyber);
-            font-family: 'Orbitron'; font-size: 0.9rem;
+            color: var(--text-cyber); font-family: 'Orbitron'; font-size: 0.9rem;
             text-transform: uppercase; letter-spacing: 0.1em;
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         @media (max-width: 800px) {
             header h1 { font-size: 2.6rem; }
+            .grid-matrix { grid-template-columns: 1fr; }
             .identity-matrix-wrapper { height: 750px; flex-direction: column; gap: 2rem;}
             .hologram-card { position: relative; transform: none !important; width: 100%; max-width: 350px;}
             .identity-matrix-wrapper:hover .hologram-card { transform: scale(1.03) !important; }
@@ -291,48 +290,59 @@
         </div>
         
         <h1>Ragesh V R</h1>
-        <p>AI Engineer | Neural Network Solutions</p>
+        <p>Engineering Student & Aspiring Intelligent Systems Architect</p>
         
         <div class="btn-wrapper">
-            <a href="https://github.com/rageshv214-bot" target="_blank" class="cyber-btn">GitHub Repo</a>
-            <a href="https://www.linkedin.com/in/ragesh-v-r-a18525392" target="_blank" class="cyber-btn">LinkedIn</a>
-            <a href="mailto:rageshv214@gmail.com" class="cyber-btn">Email Contact</a>
+            <a href="https://github.com/rageshv214-bot" target="_blank" class="cyber-btn">GitHub Dashboard</a>
+            <a href="https://www.linkedin.com/in/ragesh-v-r-a18525392" target="_blank" class="cyber-btn">LinkedIn Connect</a>
+            <a href="mailto:rageshv214@gmail.com" class="cyber-btn">rageshv214@gmail.com</a>
+            <a href="mailto:rv4102@srmist.edu.in" class="cyber-btn">rv4102@srmist.edu.in</a>
+            <a href="tel:+916238149081" class="cyber-btn">+91 6238149081</a>
         </div>
     </header>
 
     <main class="main-container">
         
-        <section id="system_log">
-            <h2>System.log</h2>
-            <p class="p-matrix">
-                I am an undergraduate engineering student specializing in Artificial Intelligence. My work focuses on synthesizing core algorithmic principles with practical application design, mastering complex logic management, and optimizing low-level hardware automation.
-            </p>
-        </section>
+        <div class="grid-matrix" style="margin-bottom: 3rem;">
+            <section style="margin-bottom: 0;">
+                <h2>System Overview</h2>
+                <p class="p-matrix">
+                    I am an undergraduate engineering student specializing in Artificial Intelligence. My work focuses on synthesizing core algorithmic principles with practical application design, mastering complex logic management, and exploring structural system states.
+                </p>
+            </section>
 
-        <section id="credentials">
-            <h2>Credentials</h2>
-            <p style="font-size: 1.3rem; font-weight:700; color:#fff; font-family:Orbitron;">SRMIST</p>
-            <p style="color: var(--text-cyber); margin-bottom:0.5rem;">B.Tech in Artificial Intelligence</p>
-            <p class="code-tag">ID: RA2511047010065 | Cohort: 2025–2029</p>
-        </section>
+            <section style="margin-bottom: 0;">
+                <h2>Credentials</h2>
+                <p style="font-size: 1.3rem; font-weight:700; color:#fff; font-family:Orbitron;">SRMIST</p>
+                <p style="color: var(--text-cyber); margin-bottom:1rem;">B.Tech in Artificial Intelligence</p>
+                <p class="code-tag">ID: RA2511047010065 | Cohort: 2025–2029</p>
+            </section>
+            
+            <section style="margin-bottom: 0;">
+                <h2>Skill Matrix</h2>
+                <p style="color: #fff; margin-bottom: 0.5rem;">Languages: <span style="color: var(--text-cyber); font-weight: 300;">Java, Python, C</span></p>
+                <p style="color: #fff; margin-bottom: 0.5rem;">Analytics: <span style="color: var(--text-cyber); font-weight: 300;">Pandas, NumPy, Jupyter</span></p>
+                <p style="color: #fff;">Systems: <span style="color: var(--text-cyber); font-weight: 300;">Git, AutoCAD, Arduino IDE</span></p>
+            </section>
+        </div>
 
-        <section id="matrix">
-            <h2>Skill Matrix</h2>
+        <section id="repositories">
+            <h2>Production Repositories</h2>
             <div class="grid-matrix">
                 <div class="data-node">
-                    <h3>Languages</h3>
-                    <p>Core development in Java, Python, and C structures.</p>
-                    <span class="code-tag">DevStack</span>
+                    <h3>OOPSBannerApp</h3>
+                    <p>Object-Oriented Programming Learning Project focused on custom-styled output displays while executing modular design methodology.</p>
+                    <span class="code-tag"><span class="lang-dot"></span> Java</span>
                 </div>
                 <div class="data-node">
-                    <h3>Analytics</h3>
-                    <p>Harnessing Pandas, NumPy, and Jupyter environments.</p>
-                    <span class="code-tag">DataStack</span>
+                    <h3>HelloApp</h3>
+                    <p>System scaling from simple prints to comprehensive collection management featuring automated input tracking protocols.</p>
+                    <span class="code-tag"><span class="lang-dot"></span> Java</span>
                 </div>
                 <div class="data-node">
-                    <h3>Systems</h3>
-                    <p>Git, Version Workflows, AutoCAD Modeling, Arduino.</p>
-                    <span class="code-tag">SysStack</span>
+                    <h3>TicTacToe</h3>
+                    <p>Interactive console logic platform testing structural array states and algorithmic decisions navigating complex multidimensional bounds.</p>
+                    <span class="code-tag"><span class="lang-dot"></span> Java</span>
                 </div>
             </div>
         </section>
@@ -345,6 +355,7 @@
                 <div class="hologram-card" id="holo-1">
                     <img src="photo1.jpg" alt="Ragesh Pro Blend 1">
                 </div>
+                
                 <div class="hologram-card" id="holo-2">
                     <img src="photo2.jpg" alt="Ragesh Pro Blend 2">
                 </div>
