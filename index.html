@@ -158,6 +158,13 @@
             gap: 1.5rem;
         }
 
+        .grid-matrix-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
         .data-node {
             background: rgba(0,0,0,0.3);
             border: 1px solid rgba(255,255,255,0.03);
@@ -194,6 +201,7 @@
             border-radius: 4px;
             background: rgba(0, 255, 255, 0.05);
             display: inline-block;
+            margin-top: 0.5rem;
         }
 
         .lang-dot {
@@ -275,7 +283,7 @@
 
         @media (max-width: 800px) {
             header h1 { font-size: 2.6rem; }
-            .grid-matrix { grid-template-columns: 1fr; }
+            .grid-matrix, .grid-matrix-2 { grid-template-columns: 1fr; }
             .identity-matrix-wrapper { height: 750px; flex-direction: column; gap: 2rem;}
             .hologram-card { position: relative; transform: none !important; width: 100%; max-width: 350px;}
             .identity-matrix-wrapper:hover .hologram-card { transform: scale(1.03) !important; }
@@ -310,13 +318,6 @@
                     I am an undergraduate engineering student specializing in Artificial Intelligence. My work focuses on synthesizing core algorithmic principles with practical application design, mastering complex logic management, and exploring structural system states.
                 </p>
             </section>
-
-            <section style="margin-bottom: 0;">
-                <h2>Credentials</h2>
-                <p style="font-size: 1.3rem; font-weight:700; color:#fff; font-family:Orbitron;">SRMIST</p>
-                <p style="color: var(--text-cyber); margin-bottom:1rem;">B.Tech in Artificial Intelligence</p>
-                <p class="code-tag">ID: RA2511047010065 | Cohort: 2025–2029</p>
-            </section>
             
             <section style="margin-bottom: 0;">
                 <h2>Skill Matrix</h2>
@@ -325,6 +326,25 @@
                 <p style="color: #fff;">Systems: <span style="color: var(--text-cyber); font-weight: 300;">Git, AutoCAD, Arduino IDE</span></p>
             </section>
         </div>
+
+        <section id="credentials">
+            <h2>Academic Credentials</h2>
+            <div class="grid-matrix-2" style="margin-bottom: 0;">
+                <div class="data-node">
+                    <h3>Undergraduate Education</h3>
+                    <p style="font-weight: 700; color: #fff; margin-bottom: 0.2rem;">SRM Institute of Science and Technology</p>
+                    <p style="color: var(--neon-pink); font-size: 0.9rem; margin-bottom: 0.8rem;">Kattankulathur Campus, Chennai</p>
+                    <p>Bachelor of Technology (B.Tech) in Artificial Intelligence.</p>
+                    <span class="code-tag">ID: RA2511047010065 | Cohort: 2025–2029</span>
+                </div>
+                <div class="data-node">
+                    <h3>Higher Secondary Education</h3>
+                    <p style="font-weight: 700; color: #fff; margin-bottom: 0.2rem;">St. Jerome's HSS</p>
+                    <p style="color: var(--neon-cyan); font-size: 0.9rem; margin-bottom: 0.8rem;">Vellayamkudy, Idukki</p>
+                    <p>Completed higher secondary education with a strong foundation in core sciences.</p>
+                </div>
+            </div>
+        </section>
 
         <section id="repositories">
             <h2>Production Repositories</h2>
