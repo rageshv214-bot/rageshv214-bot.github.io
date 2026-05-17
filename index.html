@@ -3,52 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ragesh V R | Portfolio</title>
+    <title>Ragesh V R | AI Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --text-main: #334155;
-            --text-light: #64748b;
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --border: #e2e8f0;
+            --bg-main: #060913;
+            --bg-card: rgba(13, 20, 38, 0.6);
+            --border-color: rgba(56, 189, 248, 0.15);
+            --border-hover: rgba(99, 102, 241, 0.4);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-cyan: #38bdf8;
+            --accent-indigo: #6366f1;
+            --gradient-glow: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-body);
-            color: var(--text-main);
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
             line-height: 1.6;
-            padding-bottom: 4rem;
+        }
+
+        /* Ambient Glow Background Effect */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            left: -150px;
+            background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Content Smooth Fade-In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         header {
-            background: var(--primary);
-            color: #ffffff;
-            padding: 4rem 2rem 3rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem 2rem;
             text-align: center;
-            border-bottom: 4px solid var(--accent);
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
 
-        .header-content h1 {
-            font-size: 2.8rem;
+        .profile-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: var(--accent-cyan);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.03em;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
 
-        .header-content p {
-            font-size: 1.25rem;
-            color: #cbd5e1;
-            margin-bottom: 1.5rem;
+        header p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+            font-weight: 300;
         }
 
         .contact-links {
@@ -56,98 +110,132 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
         }
 
         .btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
+            border-color: var(--accent-cyan);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+            color: #ffffff;
         }
 
-        .btn-primary {
-            background: var(--accent);
-            border-color: var(--accent);
+        .btn-gradient {
+            background: var(--gradient-glow);
+            border: none;
+            color: #ffffff;
+            font-weight: 600;
         }
 
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            border-color: var(--accent-hover);
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(99, 102, 241, 0.3);
+            opacity: 0.95;
         }
 
         .container {
-            max-width: 950px;
-            margin: 3rem auto 0 auto;
-            padding: 0 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         section {
             background: var(--bg-card);
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--border);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(16px);
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
 
+        section:nth-child(1) { animation-delay: 0.2s; }
+        section:nth-child(2) { animation-delay: 0.4s; }
+        section:nth-child(3) { animation-delay: 0.6s; }
+        section:nth-child(4) { animation-delay: 0.8s; }
+
         h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border);
+            font-family: 'Space Grotesk', sans-serif;
+            color: #ffffff;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 24px;
+            background: var(--gradient-glow);
+            border-radius: 4px;
         }
 
         .about-text {
-            font-size: 1.1rem;
-            color: var(--text-main);
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .edu-wrapper {
+            position: relative;
         }
 
         .meta-text {
-            color: var(--text-light);
+            color: var(--accent-cyan);
             font-size: 0.95rem;
-            margin-top: 0.25rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
         }
 
         .skill-group {
-            background: var(--bg-body);
-            padding: 1.25rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-group:hover {
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .skill-group h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         .skill-group p {
-            color: var(--text-main);
+            color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
@@ -158,79 +246,104 @@
         }
 
         .repo-card {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            background: #ffffff;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.01);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .repo-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--gradient-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .repo-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transform: translateX(6px) translateY(-2px);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .repo-card:hover::before {
+            opacity: 1;
         }
 
         .repo-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .repo-title {
-            font-size: 1.2rem;
-            color: var(--accent);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            transition: color 0.2s ease;
         }
 
-        .repo-title:hover {
-            text-decoration: underline;
+        .repo-card:hover .repo-title {
+            color: var(--accent-cyan);
         }
 
         .badge {
             font-size: 0.75rem;
-            padding: 0.25rem 0.5rem;
-            border-radius: 12px;
-            background: var(--bg-body);
-            color: var(--text-light);
-            border: 1px solid var(--border);
-            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .repo-desc {
-            color: var(--text-main);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
         }
 
         .repo-footer {
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-light);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
         .lang-dot {
-            height: 10px;
-            width: 10px;
-            background-color: #b07219;
+            height: 12px;
+            width: 12px;
+            background: var(--gradient-glow);
             border-radius: 50%;
             display: inline-block;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
         }
 
         footer {
             text-align: center;
-            margin-top: 4rem;
+            margin-top: 6rem;
+            padding: 2rem 0;
             color: var(--text-light);
             font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        @media (max-width: 600px) {
-            header { padding: 3rem 1rem 2rem 1rem; }
-            .header-content h1 { font-size: 2rem; }
-            section { padding: 1.5rem; }
+        @media (max-width: 768px) {
+            header { padding: 4rem 1rem 2rem 1rem; }
+            header h1 { font-size: 2.5rem; }
+            section { padding: 1.75rem; }
             .contact-links { flex-direction: column; }
             .btn { width: 100%; justify-content: center; }
         }
@@ -239,87 +352,88 @@
 <body>
 
     <header>
-        <div class="header-content">
-            <h1>Ragesh V R</h1>
-            <p>B.Tech Student in Artificial Intelligence</p>
-            <div class="contact-links">
-                <a href="https://github.com/rageshv214-bot" target="_blank" class="btn btn-primary">GitHub Profile</a>
-                <a href="https://www.linkedin.com/in/ragesh-v-r-a18525392" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
-                <a href="mailto:rageshv214@gmail.com" class="btn">rageshv214@gmail.com</a>
-                <a href="mailto:rv4102@srmist.edu.in" class="btn">rv4102@srmist.edu.in</a>
-                <a href="tel:6238149081" class="btn">+91 6238149081</a>
-            </div>
+        <div class="profile-badge">ARTIFICIAL INTELLIGENCE PORTFOLIO</div>
+        <h1>Ragesh V R</h1>
+        <p>Engineering Student & Aspiring Intelligent Systems Architect</p>
+        <div class="contact-links">
+            <a href="https://github.com/rageshv214-bot" target="_blank" class="btn btn-gradient">GitHub Dashboard</a>
+            <a href="https://www.linkedin.com/in/ragesh-v-r-a18525392" target="_blank" class="btn">LinkedIn Connect</a>
+            <a href="mailto:rageshv214@gmail.com" class="btn">rageshv214@gmail.com</a>
+            <a href="mailto:rv4102@srmist.edu.in" class="btn">rv4102@srmist.edu.in</a>
+            <a href="tel:6238149081" class="btn">+91 6238149081</a>
         </div>
     </header>
 
     <div class="container">
         
         <section id="about">
-            <h2>About Me</h2>
+            <h2>System Overview</h2>
             <p class="about-text">
-                I am an engineering student pursuing my specialization in Artificial Intelligence. I focus heavily on solidifying my core programming paradigms, building desktop implementations, and exploring systemic object design patterns alongside embedded hardware automation.
+                I am an undergraduate engineering student deep-diving into foundational computer science paradigms and Artificial Intelligence structures. Focused on masterfully applying object-oriented design logic, optimizing systemic control flows, and exploring low-level microcontroller automation.
             </p>
         </section>
 
         <section id="education">
-            <h2>Education</h2>
-            <p><strong>SRM Institute of Science and Technology (SRMIST)</strong></p>
-            <p>Bachelor of Technology - B.Tech, Artificial Intelligence</p>
-            <p class="meta-text">Cohort: 2025 – 2029 | Registration No: RA2511047010065</p>
+            <h2>Academic Credentials</h2>
+            <div class="edu-wrapper">
+                <p style="font-size: 1.25rem; font-weight:600;">SRM Institute of Science and Technology (SRMIST)</p>
+                <p style="color: var(--text-secondary);">Bachelor of Technology - B.Tech, Artificial Intelligence</p>
+                <p class="meta-text">Cohort: 2025 – 2029 &bull; Registration No: RA2511047010065</p>
+            </div>
         </section>
 
         <section id="skills">
-            <h2>Technical Skills</h2>
+            <h2>Core Matrix (Skills)</h2>
             <div class="skills-grid">
                 <div class="skill-group">
-                    <h4>Core Languages</h4>
+                    <h4>Languages</h4>
                     <p>Java, Python, C</p>
                 </div>
                 <div class="skill-group">
-                    <h4>Frameworks & Data</h4>
-                    <p>Pandas, NumPy, Jupyter Notebooks</p>
+                    <h4>Frameworks & Analytics</h4>
+                    <p>Pandas, NumPy, Jupyter Notebook Environments</p>
                 </div>
                 <div class="skill-group">
-                    <h4>Tools & Engineering</h4>
-                    <p>Git, Version Control, AutoCAD, Arduino IDE</p>
+                    <h4>Development Tools</h4>
+                    <p>Git, Version Workflows, AutoCAD Modeling, Arduino IDE</p>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Popular Repositories</h2>
+            <h2>Production Repositories</h2>
             <div class="repo-grid">
                 
                 <div class="repo-card">
                     <div class="repo-header">
                         <a href="https://github.com/rageshv214-bot/OOPSBannerApp" target="_blank" class="repo-title">OOPSBannerApp</a>
-                        <span class="badge">Public</span>
+                        <span class="badge">Active</span>
                     </div>
-                    <p class="repo-desc">"OOPS Banner App - Object-Oriented Programming Learning Project"</p>
+                    <p class="repo-desc">An Object-Oriented Programming environment built to construct robust, custom-styled output displays while executing modular design methodology.</p>
                     <div class="repo-footer">
-                        <span><span class="lang-dot"></span> Java</span>
+                        <span><span class="lang-dot"></span> Core Java</span>
                     </div>
                 </div>
 
                 <div class="repo-card">
                     <div class="repo-header">
                         <a href="https://github.com/rageshv214-bot/HelloApp" target="_blank" class="repo-title">HelloApp</a>
-                        <span class="badge">Public</span>
+                        <span class="badge">Complete</span>
                     </div>
-                    <p class="repo-desc">Hello App starts with Hello World, progresses to displaying a user name, then names from command-line args and standard input. It then manages names in a collection with list/remove options, refactoring system structures dynamically.</p>
+                    <p class="repo-desc">Scales an implementation from simple standard system prints to managing comprehensive collections featuring automated input tracking protocols.</p>
                     <div class="repo-footer">
-                        <span><span class="lang-dot"></span> Java</span>
+                        <span><span class="lang-dot"></span> Core Java</span>
                     </div>
                 </div>
 
                 <div class="repo-card">
                     <div class="repo-header">
                         <a href="https://github.com/rageshv214-bot/TicTacToe" target="_blank" class="repo-title">TicTacToe</a>
-                        <span class="badge">Public</span>
+                        <span class="badge">Complete</span>
                     </div>
-                    <p class="repo-desc">Develop a console-based Tic-Tac-Toe game where a human plays against the computer. This application helps students strengthen logical thinking, control flow, and modular programming by breaking down structural conditions.</p>
+                    <p class="repo-desc">An interactive console logic platform testing structural array states and algorithmic decisions navigating complex multidimensional bounds.</p>
                     <div class="repo-footer">
-                        <span><span class="lang-dot"></span> Java</span>
+                        <span><span class="lang-dot"></span> Core Java</span>
                     </div>
                 </div>
 
@@ -329,8 +443,11 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Ragesh V R. Hosted via GitHub Pages.</p>
+        <p>&copy; 2026 Ragesh V R &bull; Managed Engine powered by GitHub Pages.</p>
     </footer>
 
 </body>
 </html>
+
+
+        
