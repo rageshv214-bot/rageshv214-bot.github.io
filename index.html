@@ -32,254 +32,92 @@
                 radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 40%);
         }
 
-        /* Neon Shine Animation */
         @keyframes shine { to { background-position: 200% center; } }
         @keyframes glitch { 0% { text-shadow: 2px 0 var(--neon-pink); } 50% { text-shadow: -2px 0 var(--neon-cyan); } 100% { text-shadow: 2px 0 var(--neon-purple); } }
 
-        /* HEADER & HERO */
-        header {
-            text-align: center;
-            padding: 7rem 1.5rem 4rem;
-            position: relative;
-        }
+        header { text-align: center; padding: 7rem 1.5rem 4rem; position: relative; }
 
         .profile-container {
-            position: relative;
-            width: 170px;
-            height: 170px;
-            margin: 0 auto 2.5rem;
-            border-radius: 50%;
-            padding: 5px;
-            background: var(--multi-gradient);
-            background-size: 200% auto;
-            animation: shine 5s linear infinite;
-            box-shadow: 0 0 40px rgba(157, 0, 255, 0.3);
+            position: relative; width: 170px; height: 170px; margin: 0 auto 2.5rem;
+            border-radius: 50%; padding: 5px; background: var(--multi-gradient);
+            background-size: 200% auto; animation: shine 5s linear infinite; box-shadow: 0 0 40px rgba(157, 0, 255, 0.3);
         }
 
-        .profile-container img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--bg-base);
-        }
+        .profile-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid var(--bg-base); }
 
         header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.8rem;
-            font-weight: 800;
-            background: var(--text-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.75rem;
-            letter-spacing: -2px;
+            font-family: 'Orbitron', sans-serif; font-size: 3.8rem; font-weight: 800;
+            background: var(--text-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem; letter-spacing: -2px;
         }
 
-        header p {
-            font-size: 1.15rem;
-            color: var(--text-cyber);
-            margin-bottom: 2.5rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
+        header p { font-size: 1.15rem; color: var(--text-cyber); margin-bottom: 2.5rem; font-weight: 300; text-transform: uppercase; letter-spacing: 0.1em; }
 
-        .btn-wrapper {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto;
-        }
+        .btn-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto; }
 
         .cyber-btn {
-            padding: 0.8rem 1.8rem;
-            border-radius: 6px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
+            padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none; color: var(--text-main); font-weight: 700;
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(10px); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); position: relative;
         }
 
-        .cyber-btn:hover {
-            border-color: var(--neon-cyan);
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
-        }
+        .cyber-btn:hover { border-color: var(--neon-cyan); color: #fff; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2); }
+        .btn-highlight { border-color: var(--neon-pink); background: rgba(255, 0, 85, 0.05); }
 
-        .main-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        .main-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-        /* CYBER PANEL & BLENDING */
         section {
-            background: var(--bg-panel);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 12px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(25px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-            transition: border-color 0.4s ease;
+            background: var(--bg-panel); border: 1px solid rgba(255,255,255,0.04); border-radius: 12px;
+            padding: 3rem; margin-bottom: 3rem; backdrop-filter: blur(25px); box-shadow: 0 15px 40px rgba(0,0,0,0.4); transition: border-color 0.4s ease;
         }
 
         section:hover { border-color: rgba(157, 0, 255, 0.3); }
 
-        h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.9rem;
-            margin-bottom: 2rem;
-            color: #fff;
-            display: flex; align-items: center; gap: 12px;
-        }
+        h2 { font-family: 'Orbitron', sans-serif; font-size: 1.9rem; margin-bottom: 2rem; color: #fff; display: flex; align-items: center; gap: 12px; }
+        h2::before { content: ''; display: inline-block; width: 30px; height: 3px; background: var(--multi-gradient); animation: glitch 2s ease infinite; }
 
-        h2::before {
-            content: ''; display: inline-block; width: 30px; height: 3px;
-            background: var(--multi-gradient);
-            animation: glitch 2s ease infinite;
-        }
+        .p-matrix { font-size: 1.15rem; color: var(--text-cyber); line-height: 1.8; font-weight: 300; }
 
-        .p-matrix {
-            font-size: 1.15rem;
-            color: var(--text-cyber);
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        /* GRIDS & CARDS */
-        .grid-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .grid-matrix-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
+        .grid-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .grid-matrix-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
 
         .data-node {
-            background: rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.03);
-            padding: 1.8rem;
-            border-radius: 8px;
-            transition: all 0.4s ease;
-            position: relative;
+            background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.03); padding: 1.8rem; border-radius: 8px;
+            transition: all 0.4s ease; position: relative;
         }
 
-        .data-node::after {
-            content: ''; position: absolute; bottom: 0; left: 0;
-            width: 0%; height: 2px;
-            background: var(--multi-gradient);
-            transition: width 0.4s ease;
-        }
-
-        .data-node:hover {
-            border-color: rgba(255, 0, 85, 0.3);
-            transform: scale(1.02) translateY(-3px);
-            background: rgba(255, 255, 255, 0.01);
-        }
-
+        .data-node::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: var(--multi-gradient); transition: width 0.4s ease; }
+        .data-node:hover { border-color: rgba(255, 0, 85, 0.3); transform: scale(1.02) translateY(-3px); background: rgba(255, 255, 255, 0.01); }
         .data-node:hover::after { width: 100%; }
 
         .data-node h3 { color: #fff; margin-bottom: 0.6rem; font-family: 'Orbitron'; font-size: 1.25rem; }
         .data-node p { color: var(--text-cyber); font-size: 1rem; margin-bottom: 1.2rem; font-weight: 300; line-height: 1.5;}
         
         .code-tag {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.75rem;
-            color: var(--neon-cyan);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            padding: 5px 12px;
-            border-radius: 4px;
-            background: rgba(0, 255, 255, 0.05);
-            display: inline-block;
-            margin-top: 0.5rem;
+            font-family: 'Orbitron', sans-serif; font-size: 0.75rem; color: var(--neon-cyan); border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 5px 12px; border-radius: 4px; background: rgba(0, 255, 255, 0.05); display: inline-block; margin-top: 0.5rem;
         }
 
-        .lang-dot {
-            height: 8px; width: 8px;
-            background-color: #b07219;
-            border-radius: 50%; display: inline-block; margin-right: 5px;
-        }
+        .lang-dot { height: 8px; width: 8px; background-color: #b07219; border-radius: 50%; display: inline-block; margin-right: 5px; }
 
-        /* HOLOGRAPHIC GALLERY */
-        .identity-matrix-wrapper {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        .identity-matrix-wrapper { position: relative; width: 100%; height: 500px; margin-top: 2rem; display: flex; justify-content: center; align-items: center; }
+        .hologram-card { position: absolute; width: 320px; height: 420px; border-radius: 12px; overflow: hidden; transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); box-shadow: 0 0 30px rgba(0,0,0,0.6); z-index: 1; }
+        .hologram-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2); mix-blend-mode: luminosity; transition: all 0.6s ease; }
+        .hologram-card::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px); pointer-events: none; opacity: 0.6; transition: opacity 0.6s ease; }
 
-        .hologram-card {
-            position: absolute;
-            width: 320px;
-            height: 420px;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            box-shadow: 0 0 30px rgba(0,0,0,0.6);
-            z-index: 1;
-        }
+        #holo-1 { transform: translateX(-150px) rotate(-8deg); border: 2px solid var(--neon-pink); background: rgba(255, 0, 85, 0.1); }
+        #holo-2 { transform: translateX(150px) rotate(8deg); border: 2px solid var(--neon-cyan); background: rgba(0, 255, 255, 0.1); }
 
-        .hologram-card img {
-            width: 100%; height: 100%; object-fit: cover;
-            filter: grayscale(100%) contrast(1.2);
-            mix-blend-mode: luminosity;
-            transition: all 0.6s ease;
-        }
-
-        .hologram-card::after {
-            content: ''; position: absolute; inset: 0;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
-            pointer-events: none; opacity: 0.6; transition: opacity 0.6s ease;
-        }
-
-        #holo-1 {
-            transform: translateX(-150px) rotate(-8deg);
-            border: 2px solid var(--neon-pink);
-            background: rgba(255, 0, 85, 0.1);
-        }
-
-        #holo-2 {
-            transform: translateX(150px) rotate(8deg);
-            border: 2px solid var(--neon-cyan);
-            background: rgba(0, 255, 255, 0.1);
-        }
-
-        .identity-matrix-wrapper:hover #holo-1 {
-            transform: translateX(-240px) translateY(-10px) rotate(-3deg) scale(1.05);
-            z-index: 2; box-shadow: 0 20px 60px rgba(255, 0, 85, 0.4);
-        }
-
-        .identity-matrix-wrapper:hover #holo-2 {
-            transform: translateX(240px) translateY(10px) rotate(3deg) scale(1.05);
-            z-index: 2; box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4);
-        }
-
-        .identity-matrix-wrapper:hover img {
-            filter: grayscale(0%) contrast(1);
-            mix-blend-mode: normal;
-        }
-
+        .identity-matrix-wrapper:hover #holo-1 { transform: translateX(-240px) translateY(-10px) rotate(-3deg) scale(1.05); z-index: 2; box-shadow: 0 20px 60px rgba(255, 0, 85, 0.4); }
+        .identity-matrix-wrapper:hover #holo-2 { transform: translateX(240px) translateY(10px) rotate(3deg) scale(1.05); z-index: 2; box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4); }
+        .identity-matrix-wrapper:hover img { filter: grayscale(0%) contrast(1); mix-blend-mode: normal; }
         .identity-matrix-wrapper:hover::after { opacity: 0; }
 
-        footer {
-            text-align: center; padding: 4rem;
-            color: var(--text-cyber); font-family: 'Orbitron'; font-size: 0.9rem;
-            text-transform: uppercase; letter-spacing: 0.1em;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-        }
+        /* DOWNLOAD SECTION STYLING */
+        .download-box { text-align: center; padding: 4rem 2rem; border: 2px dashed rgba(0, 255, 255, 0.3); border-radius: 12px; background: rgba(0, 255, 255, 0.02); }
+        .download-box h3 { font-family: 'Orbitron'; font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+        
+        footer { text-align: center; padding: 4rem; color: var(--text-cyber); font-family: 'Orbitron'; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; border-top: 1px solid rgba(255, 255, 255, 0.03); }
 
         @media (max-width: 800px) {
             header h1 { font-size: 2.6rem; }
@@ -299,13 +137,15 @@
         
         <h1>Ragesh V R</h1>
         <p>Engineering Student & Aspiring Intelligent Systems Architect</p>
+        <p style="color: var(--neon-cyan); font-size: 0.9rem; font-family: 'Orbitron'; letter-spacing: 2px; margin-top: -1.5rem; margin-bottom: 2rem;">Idukki, Kerala, India</p>
         
         <div class="btn-wrapper">
-            <a href="https://github.com/rageshv214-bot" target="_blank" class="cyber-btn">GitHub Dashboard</a>
-            <a href="https://www.linkedin.com/in/ragesh-v-r-a18525392" target="_blank" class="cyber-btn">LinkedIn Connect</a>
+            <a href="https://github.com/rageshv214-bot" target="_blank" class="cyber-btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/ragesh-v-r-a18525392" target="_blank" class="cyber-btn">LinkedIn</a>
             <a href="mailto:rageshv214@gmail.com" class="cyber-btn">rageshv214@gmail.com</a>
             <a href="mailto:rv4102@srmist.edu.in" class="cyber-btn">rv4102@srmist.edu.in</a>
             <a href="tel:+916238149081" class="cyber-btn">+91 6238149081</a>
+            <a href="#download_center" class="cyber-btn btn-highlight">Get Resume</a>
         </div>
     </header>
 
@@ -323,7 +163,8 @@
                 <h2>Skill Matrix</h2>
                 <p style="color: #fff; margin-bottom: 0.5rem;">Languages: <span style="color: var(--text-cyber); font-weight: 300;">Java, Python, C</span></p>
                 <p style="color: #fff; margin-bottom: 0.5rem;">Analytics: <span style="color: var(--text-cyber); font-weight: 300;">Pandas, NumPy, Jupyter</span></p>
-                <p style="color: #fff;">Systems: <span style="color: var(--text-cyber); font-weight: 300;">Git, AutoCAD, Arduino IDE</span></p>
+                <p style="color: #fff; margin-bottom: 0.5rem;">Systems: <span style="color: var(--text-cyber); font-weight: 300;">Git, AutoCAD, Arduino IDE</span></p>
+                <p style="color: #fff;">Hardware: <span style="color: var(--text-cyber); font-weight: 300;">RFID Modules, Servos, LCD Displays</span></p>
             </section>
         </div>
 
@@ -350,20 +191,32 @@
             <h2>Production Repositories</h2>
             <div class="grid-matrix">
                 <div class="data-node">
-                    <h3>OOPSBannerApp</h3>
-                    <p>Object-Oriented Programming Learning Project focused on custom-styled output displays while executing modular design methodology.</p>
+                    <h3>OOPS Banner Application</h3>
+                    <p>Developed a modular, Java-based desktop application utilizing core Object-Oriented Programming (OOP) design principles. Managed codebase using Git workflows.</p>
                     <span class="code-tag"><span class="lang-dot"></span> Java</span>
                 </div>
                 <div class="data-node">
-                    <h3>HelloApp</h3>
-                    <p>System scaling from simple prints to comprehensive collection management featuring automated input tracking protocols.</p>
-                    <span class="code-tag"><span class="lang-dot"></span> Java</span>
+                    <h3>RFID Entry System</h3>
+                    <p>Designed an IoT-style hardware prototype for secure access control. Integrated RFID sensors, microcontrollers, servos, and LCD displays.</p>
+                    <span class="code-tag"><span class="lang-dot"></span> Embedded C</span>
                 </div>
                 <div class="data-node">
-                    <h3>TicTacToe</h3>
-                    <p>Interactive console logic platform testing structural array states and algorithmic decisions navigating complex multidimensional bounds.</p>
-                    <span class="code-tag"><span class="lang-dot"></span> Java</span>
+                    <h3>Academic PBL Project</h3>
+                    <p>Collaborated to research and author a comprehensive problem-solving script and presentation report, refining technical documentation skills.</p>
+                    <span class="code-tag">Technical Research</span>
                 </div>
+            </div>
+        </section>
+
+        <section id="leadership">
+            <h2>Leadership & Organization</h2>
+            <div class="data-node" style="background: transparent; border: none; padding: 0;">
+                <h3 style="color: var(--neon-cyan);">Scouts and Guides | Active Member & Leader</h3>
+                <p class="p-matrix" style="margin-top: 1rem;">
+                    Dedicated 8 consecutive years to community service, rigorous physical training, and camp management. Fostered high levels of discipline, civic responsibility, and developed core foundational soft skills in peer mentorship and structured communication.
+                    <br><br>
+                    Successfully led patrol units during regional camps, organizing group tasks, survival drills, and public service initiatives under high-pressure environments.
+                </p>
             </div>
         </section>
 
@@ -375,10 +228,18 @@
                 <div class="hologram-card" id="holo-1">
                     <img src="photo1.jpg" alt="Ragesh Pro Blend 1">
                 </div>
-                
                 <div class="hologram-card" id="holo-2">
                     <img src="photo2.jpg" alt="Ragesh Pro Blend 2">
                 </div>
+            </div>
+        </section>
+
+        <section id="download_center">
+            <h2>Asset Download</h2>
+            <div class="download-box">
+                <h3>Curriculum Vitae / Resume</h3>
+                <p class="p-matrix" style="margin-bottom: 2rem; font-size: 1rem;">Download a complete PDF copy of my professional resume, including extended academic coursework, technical explorations, and complete contact details.</p>
+                <a href="resume.pdf" target="_blank" class="cyber-btn btn-highlight" download>Download PDF Resume</a>
             </div>
         </section>
 
@@ -390,3 +251,4 @@
 
 </body>
 </html>
+
