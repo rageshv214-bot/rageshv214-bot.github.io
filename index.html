@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
     <style>
         :root {
-            var(--bg-base): #000000;
+            --bg-base: #000000;
             --bg-panel: rgba(10, 10, 10, 0.4);
             --border-color: rgba(255, 255, 255, 0.05);
             --neon-pink: #ff0055;
@@ -33,15 +33,10 @@
             position: relative;
         }
 
-        /* FULL SCREEN SPIRAL CANVAS */
         #spiral-canvas {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -2;
-            background: #000;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -2; background: #000;
         }
 
         @keyframes pulseGlow {
@@ -180,7 +175,7 @@
                     <h3>Undergraduate Education</h3>
                     <p style="font-weight: 700; color: #fff; margin-bottom: 0.2rem;">SRM Institute of Science and Technology</p>
                     <p style="color: var(--neon-pink); font-size: 0.9rem; margin-bottom: 0.8rem;">Kattankulathur Campus, Chennai</p>
-                    <p>Bachelor of Technology (B.Tech) in Artificial Intelligence.</p>
+                    <p>Bachelor of Technology (B.Tech) in Artificial Intelligence. Active in ICPC Competitive Programming (Team Atmos) and TECHFORMERS Codeathon.</p>
                     <span class="code-tag">ID: RA2511047010065 | Cohort: 2025–2029</span>
                 </div>
                 <div class="data-node">
@@ -192,15 +187,43 @@
             </div>
         </section>
 
+        <section id="certifications">
+            <h2>Licenses & Certifications</h2>
+            <div class="grid-matrix">
+                <div class="data-node">
+                    <h3 style="color: var(--neon-cyan);">Artificial Intelligence & Machine Learning</h3>
+                    <p style="color: var(--neon-pink); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">Simplilearn & Google Cloud</p>
+                    <p>Earned official certifications in "Introduction to Generative AI", "Machine Learning for Beginners", "Introduction to Artificial Intelligence", and "Introduction to Cloud Computing".</p>
+                    <span class="code-tag">Generative AI</span> <span class="code-tag">Cloud Computing</span>
+                </div>
+                <div class="data-node">
+                    <h3 style="color: var(--neon-purple);">Technical Article Publication</h3>
+                    <p style="color: var(--neon-cyan); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">LinkedIn Published Author</p>
+                    <p>Published technical article titled: <em>"How Machines See: An Introduction to Image Processing with Python and NumPy"</em>. Exploring fundamental computer vision algorithms and matrix translations.</p>
+                    <span class="code-tag">Computer Vision</span> <span class="code-tag">Python/NumPy</span>
+                </div>
+            </div>
+        </section>
+
         <section id="repositories">
             <h2>Experience & Production Repositories</h2>
             <div class="grid-matrix">
-                <div class="data-node" style="grid-column: 1 / -1;">
-                    <h3 style="color: var(--neon-pink);">Tata Group Data Analytics Job Simulation</h3>
-                    <p style="color: var(--neon-cyan); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">Tata iQ Financial Services Team | Forage (May 2026)</p>
-                    <p>Completed a job simulation executing advanced data analytics and predictive logic framework strategies. Conducted thorough exploratory data analysis (EDA) leveraging specialized AI engineering logic tools to optimize structural asset data states, identify risk markers, and map automated multi-agent security frameworks under strict compliance criteria.</p>
-                    <span class="code-tag">Data Science</span> <span class="code-tag">Predictive Systems</span>
+                
+                <div class="data-node" style="grid-column: 1 / -1; border-color: rgba(0, 229, 255, 0.4);">
+                    <h3 style="color: var(--neon-cyan);">Artificial Intelligence and Machine Learning Intern</h3>
+                    <p style="color: var(--neon-pink); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">Verveox Technologies | June 2026</p>
+                    <p>Selected for a 4-week intensive internship program focusing on real-world applications of Artificial Intelligence and Machine Learning. Collaborating with industry experts to build scalable AI models and develop foundational ML system architectures.</p>
+                    <span class="code-tag">Machine Learning</span> <span class="code-tag">AI Architecture</span>
                 </div>
+
+                <div class="data-node" style="grid-column: 1 / -1;">
+                    <h3 style="color: var(--neon-pink);">Tata Group Job Simulations</h3>
+                    <p style="color: var(--neon-cyan); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">Forage | May 2026</p>
+                    <p><strong>Cybersecurity Analyst:</strong> Completed simulation focusing on identity and access management (IAM), threat intelligence, and risk mitigation protocols.<br><br>
+                    <strong>Data Analytics:</strong> Conducted EDA leveraging AI tools to optimize structural asset data states, identify risk markers, and map automated security frameworks under strict compliance criteria.</p>
+                    <span class="code-tag">Cybersecurity</span> <span class="code-tag">Data Science</span>
+                </div>
+
                 <div class="data-node">
                     <h3>OOPS Banner Application</h3>
                     <p>Developed a modular, Java-based desktop application utilizing core Object-Oriented Programming (OOP) design principles. Managed codebase using Git workflows.</p>
@@ -210,11 +233,6 @@
                     <h3>RFID Entry System</h3>
                     <p>Designed an IoT-style hardware prototype for secure access control. Integrated RFID sensors, microcontrollers, servos, and LCD displays.</p>
                     <span class="code-tag"><span class="lang-dot"></span> Embedded C</span>
-                </div>
-                <div class="data-node">
-                    <h3>Academic PBL Project</h3>
-                    <p>Collaborated to research and author a comprehensive problem-solving script and presentation report, refining technical documentation skills.</p>
-                    <span class="code-tag">Technical Research</span>
                 </div>
             </div>
         </section>
@@ -370,7 +388,7 @@
                 this.cameraTravelDistance = 3400;
                 this.startDotYOffset = 28;
                 this.viewZoom = 100;
-                this.numberOfStars = 3000; // Adjusted for performance
+                this.numberOfStars = 3000;
                 this.trailLength = 80;
                 
                 this.setupRandomGenerator();
@@ -465,7 +483,6 @@
             render() {
                 if (!this.ctx) return;
                 
-                // Keep background transparent so site shows through
                 this.ctx.clearRect(0, 0, this.size, this.size);
                 
                 this.ctx.save();
@@ -513,7 +530,6 @@
             }
         }
 
-        // Initialize Animation on Load
         window.onload = () => {
             const canvas = document.getElementById('spiral-canvas');
             const ctx = canvas.getContext('2d');
