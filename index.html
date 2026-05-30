@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -151,7 +151,6 @@
     </header>
 
     <main class="main-container">
-        <!-- SYSTEM OVERVIEW & SKILLS -->
         <div class="grid-matrix" style="margin-bottom: 3rem;">
             <section style="margin-bottom: 0;">
                 <h2>System Overview</h2>
@@ -170,7 +169,6 @@
             </section>
         </div>
 
-        <!-- CREDENTIALS (EDUCATION) -->
         <section id="credentials">
             <h2>Academic Credentials</h2>
             <div class="grid-matrix-2" style="margin-bottom: 0;">
@@ -190,7 +188,6 @@
             </div>
         </section>
 
-        <!-- CERTIFICATIONS & PUBLICATIONS -->
         <section id="certifications">
             <h2>Licenses & Certifications</h2>
             <div class="grid-matrix">
@@ -209,7 +206,6 @@
             </div>
         </section>
 
-        <!-- REPOSITORIES & PROJECTS -->
         <section id="repositories">
             <h2>Experience & Production Repositories</h2>
             <div class="grid-matrix">
@@ -242,10 +238,9 @@
             </div>
         </section>
 
-        <!-- LEADERSHIP SECTION -->
         <section id="leadership">
             <h2>Leadership & Organization</h2>
-            <div class="data-node" style="background: transparent; border: none; padding: 0;">
+            <div class="data-node">
                 <h3 style="color: var(--neon-cyan);">Scouts and Guides | Active Member & Leader</h3>
                 <p class="p-matrix" style="margin-top: 1rem;">
                     Dedicated 8 consecutive years to community service, rigorous physical training, and camp management. Fostered high levels of discipline, civic responsibility, and developed core foundational soft skills in peer mentorship and structured communication.
@@ -253,7 +248,6 @@
             </div>
         </section>
 
-        <!-- IDENTITY MATRIX (HOLOGRAPHIC GALLERY) -->
         <section id="visual_identity">
             <h2>Identity Matrix</h2>
             <p class="p-matrix" style="margin-bottom: 2rem;">Aesthetic professional blend.</p>
@@ -267,7 +261,6 @@
             </div>
         </section>
 
-        <!-- DOWNLOAD CENTER SECTION -->
         <section id="download_center">
             <h2>Asset Download</h2>
             <div class="download-box">
@@ -283,7 +276,6 @@
         [ STATUS: DEPLOYED ] &copy; 2026 Ragesh V R
     </footer>
 
-    <!-- JS TRANSLATION OF THE REACT COMPONENT -->
     <script>
         class Vector2D {
             constructor(x, y) { this.x = x; this.y = y; }
@@ -544,7 +536,6 @@
             const ctx = canvas.getContext('2d');
             let animationController = null;
             let lastWidth = window.innerWidth;
-            let lastHeight = window.innerHeight;
 
             function resizeAndInit() {
                 const width = window.innerWidth;
@@ -565,14 +556,13 @@
 
             resizeAndInit();
 
-            // BUG FIX: Ignore minor height changes from mobile scrolling
+            // STRICT BUG FIX: Only restart if the width changes (e.g. rotating phone)
             window.addEventListener('resize', () => {
                 const currentWidth = window.innerWidth;
-                const currentHeight = window.innerHeight;
                 
-                if (currentWidth !== lastWidth || Math.abs(currentHeight - lastHeight) > 100) {
+                // If width is exactly the same, DO NOTHING. This completely ignores vertical scrolling.
+                if (currentWidth !== lastWidth) {
                     lastWidth = currentWidth;
-                    lastHeight = currentHeight;
                     resizeAndInit();
                 }
             });
@@ -580,3 +570,5 @@
     </script>
 </body>
 </html>
+                                              
+                                        
