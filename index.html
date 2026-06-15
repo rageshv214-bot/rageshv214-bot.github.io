@@ -191,6 +191,20 @@
         <section id="certifications">
             <h2>Licenses & Certifications</h2>
             <div class="grid-matrix">
+                <div class="data-node">
+                    <h3 style="color: var(--neon-cyan);">Artificial Intelligence & Machine Learning</h3>
+                    <p style="color: var(--neon-pink); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">Simplilearn & Google Cloud</p>
+                    <p>Earned official certifications in "Introduction to Generative AI", "Machine Learning for Beginners", "Introduction to Artificial Intelligence", and "Introduction to Cloud Computing".</p>
+                    <span class="code-tag">Generative AI</span> <span class="code-tag">Cloud Computing</span>
+                </div>
+
+                <div class="data-node">
+                    <h3 style="color: var(--neon-purple);">Technical Article Publication</h3>
+                    <p style="color: var(--neon-cyan); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">LinkedIn Published Author</p>
+                    <p>Published technical article titled: <em>"How Machines See: An Introduction to Image Processing with Python and NumPy"</em>. Exploring fundamental computer vision algorithms and matrix translations.</p>
+                    <span class="code-tag">Computer Vision</span> <span class="code-tag">Python/NumPy</span>
+                </div>
+
                 <div class="data-node" style="grid-column: 1 / -1; border-color: rgba(0, 229, 255, 0.3);">
                     <h3 style="color: var(--neon-cyan);">Google Prompting Essentials</h3>
                     <p style="color: var(--neon-pink); font-size: 0.85rem; font-family: 'Orbitron'; margin-bottom: 0.5rem;">Google Professional Specialization</p>
@@ -508,7 +522,6 @@
                     const y = this.viewZoom * position.y / dotDepthFromCamera;
                     const sw = 400 * sizeFactor / dotDepthFromCamera;
                     
-                    this.ctx.lineWidth = sw;
                     this.ctx.beginPath();
                     this.ctx.arc(x, y, 0.5, 0, Math.PI * 2);
                     this.ctx.fill();
@@ -538,7 +551,6 @@
                 
                 this.drawTrail(t1);
                 
-                this.ctx.fillStyle = 'white';
                 for (const star of this.stars) {
                     star.render(t1, this);
                 }
@@ -551,9 +563,6 @@
                 for (let i = 0; i < this.trailLength; i++) {
                     const f = this.map(i, 0, this.trailLength, 1.1, 0.1);
                     const sw = (1.3 * (1 - t1) + 3.0 * Math.sin(Math.PI * t1)) * f;
-                    
-                    this.ctx.fillStyle = 'rgba(0, 229, 255, 0.6)';
-                    this.ctx.lineWidth = sw;
                     
                     const pathTime = t1 - 0.00015 * i;
                     const position = this.spiralPath(pathTime);
@@ -598,6 +607,7 @@
 
             resizeAndInit();
 
+            // STRICT BUG FIX: Only restart if the width changes (e.g. rotating phone)
             window.addEventListener('resize', () => {
                 const currentWidth = window.innerWidth;
                 
